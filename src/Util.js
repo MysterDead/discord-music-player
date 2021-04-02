@@ -424,7 +424,7 @@ class Util {
         if(voice.constructor.name !== Discord.VoiceState.name)
             return false;
 
-        return voice.channel ? voice.channel.constructor.name === Discord.VoiceChannel.name : false;
+        return voice.channel ? voice.channel.constructor.name === Discord.VoiceChannel.name ? true : voice.channel.constructor.name === Discord.StageChannel.name : false;
     }
 
     /**
